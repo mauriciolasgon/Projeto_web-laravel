@@ -57,3 +57,8 @@ Rotas:
 - (get) /category/{id}
 - (get) /movies
 - (get) /movie/{id}
+
+
+
+
+https://www.figma.com/file/1a3WawcEpLP98NKOcL4A0d/Untitled?node-id=0%3A1
