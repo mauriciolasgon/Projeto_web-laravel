@@ -15,6 +15,7 @@ Atualize as variáveis de ambiente do arquivo .env
 APP_NAME=Laravel
 APP_URL=http://localhost:8080
 
+DB_USERNAME=root
 DB_PASSWORD=root
 ```
 
