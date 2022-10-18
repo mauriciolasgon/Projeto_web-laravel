@@ -96,7 +96,7 @@ h3{
 
 .aluno0{
     position: absolute;
-    font-size: 30px;
+    font-size: 50px;
     font-family:Calibri;
     color: #0035EF;
     text-align:left;
@@ -105,29 +105,29 @@ h3{
 }
 .aluno1{
     position: absolute;
-    font-size: 30px;
+    font-size: 50px;
     font-family:Calibri;
     color: #0035EF;
     text-align:left;
-    margin: 75px 0px 0px 900px;
+    margin: 75px 0px 0px 500px;
     
 }
 .aluno2{
     position: absolute;
-    font-size: 30px;
+    font-size: 50px;
     font-family:Calibri;
     color: #0035EF;
     text-align:left;
-    margin: 120px 0px 0px 900px;
+    margin: 120px 0px 0px 500px;
     
 }
 .aluno3{
     position: absolute;
-    font-size: 30px;
+    font-size: 50px;
     font-family:Calibri;
     color: #0035EF;
     text-align:right;
-    margin: 165px 0px 0px 900px;
+    margin: 165px 0px 0px 500px;
     
 }
 
