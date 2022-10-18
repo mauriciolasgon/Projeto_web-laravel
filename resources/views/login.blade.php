@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,13 +12,8 @@
         <h1>FAÇA SEU LOGIN</h1>
         <form method= "POST" action="{{route('auth')}}">
             @csrf
-            @if(session('danger'))
-            <div class="alert alert-danger">
-                {{session('danger')}}
-            </div>
-            @endif
-            <input type="number_format" name"RA/RP" placeholder="RA/RP" required>
-            <input type="password" name"password" placeholder="Senha" required>
+            <input type="number_format" name="RAP" placeholder="RA/RP" required>
+            <input type="password" name="password" placeholder="Senha" required>
 
             <button type="submit" class="btn-login">ENTRAR</button>
         </form>

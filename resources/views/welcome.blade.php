@@ -1,26 +1,63 @@
-<h1>Lista de Alunos </h1>
-<hr>
-<div id="search-container" class="col-md-12"> 
-  <h1>Busque</h1>
-  <form action="">
-    <input type="text" id="search" name="search" class="form-control" placeholder="Procurar...">
-  </form>
-</div>  
-<div id="events-container" class="col-md-12">
-    <h2>Proximos eventos</h2>
-    <p>Veja os eventos nos próximos dias</p>
-    <div id="cards-container" class="row">
-        @foreach($alunos as $aluno)
-        <div class="card-col-md-3">
-            <img src="/public/filmes.png" alt="{{$aluno->nome}}">
-            <div class="card-body">
-                <p class="card-date">1234</p>
-                <h5 class="card-title">{{$aluno->nome}}</h5>
-                <p class="card-participantes">X participantes</p>
-                <a href="#" class="btn btn-primary">Saber mais</a>
-            </div>
-        </div>
-        @endforeach
-    </div>
-
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href= {{ asset( "css/materias.css" ) }}>
+</head>
+<body>
+     <div class="box_background">
+        <div class="faixa">
+            <div class="ney">
+                    <div class="caixa1">
+                      <div class="caixa2">
+                         <div class="caixa3">
+                            <div class="caixa4">
+                                 <div class="caixa5">
+                                     <div class="caixa6">
+                                      </div>
+                                        <div class="caixao">
+                                            <div class="cal">
+                                             </div>
+                                             <div class="osc">
+                                                </div>
+                                               <div class="pi">
+                                                </div>
+                                                   <div class="eng">
+                                                     </div>
+                                                       <div class="teo">
+                                                          </div>
+                                                            <div class="rob">
+                                                               </div>
+                                                                 <div class="lup">
+                                                                      </div>
+                                                                                         
+                                            
+        <form>
+          <div>
+          @if($search)
+          <h2 class="btn-materia1">Buscando por: {{ $search }}</h2>
+          @else
+         <button class="btn-busca"></button>
+            <button class="btn-materia1"><a  href="/Materias/{{$materias[2]->materias}}">Cálculo I</a></button>               
+                <button class="btn-materia2" ><a href="/Materias/{{$materias[0]->materias}}" >OSC</a></button>                   
+                    <button class="btn-materia3" ><a href="/Materias/{{$materias[1]->materias}}">Projeto Web</a></button>                       
+                        <button class="btn-materia4"><a href="/Materias/{{$materias[3]->materias}}">Robótica</a></button>                       
+                            <button class="btn-materia5" ><a href="/Materias/{{$materias[4]->materias}}">Teologia</a></button>                                
+                                <button class="btn-materia6"><a href="/Materias/{{$materias[5]->materias}}">Fund. Eng.</a></button>
+                                   <button class="btn-busca"></button>
+                                   <form action="/a" method="GET">
+                                      <input type="text"  id="search" name="search" placeholder="Pesquisar">
+                                    </form>
+                                  @endif
+                                  @if(count($materias) == 0 && $search)
+                                  <p>Não foi possível encontrar nenhuma matéria com {{ $search }}! <a href="/a">Ver todos</a></p>
+                                  @elseif(count($materias) == 0)
+                                  <p>Essa matéria não existe</p>
+                                  @endif
+          </div>
+                                   
+        </form>                                                                                
+     </div>    
+     
+</body>
+</html>

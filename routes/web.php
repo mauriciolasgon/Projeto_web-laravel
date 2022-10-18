@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AlunoController;
+use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\LoginController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,11 +14,24 @@ use App\Http\Controllers\AlunoController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/',[AlunoController::class,'index']);
-Route::get('/Aluno/createAL', [AlunoController::class, 'create']);
+Route::get('/',[LoginController::class,'index']);
+Route::get('/a',[UsuarioController::class,'index'])->name('welcome');
+Route::get('/Materias/{materia}', [UsuarioController::class, 'show'])->name('materia');
+Route::post('/auth',[LoginController::class, 'auth'])->name('auth');
+Route::get('/Alunos/{aluno}', [UsuarioController::class, 'show_aluno'])->name('aluno');
 
 
 
 
 
 
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
