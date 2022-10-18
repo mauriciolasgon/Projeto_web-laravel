@@ -16,7 +16,6 @@ class LoginController extends Controller
     
     public function auth(Request $request)
     {
-        
         if(Auth::attempt(['RAP'=>$request->RAP,'password'=>$request->password])) {
             return redirect('/a');
         }else{
