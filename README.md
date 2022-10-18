@@ -43,7 +43,11 @@ Gerar a key do projeto Laravel
 php artisan key:generate
 ```
 
-
+Fazer o Login: 
+```sh
+RA/RP: 12345678
+Senha: Senha
+```
 Acesse o projeto
 [http://localhost:8080](http://localhost:8080)
 
