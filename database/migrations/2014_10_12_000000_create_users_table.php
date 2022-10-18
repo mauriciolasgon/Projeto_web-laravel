@@ -19,7 +19,6 @@ return new class extends Migration
             $table->boolean('identificador');
             $table->integer('RA/RP');
             $table->string('filmes');
-            $table->string('materia');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
